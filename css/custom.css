@@ -489,3 +489,53 @@ header .navbar.brand-navbar .phone-link:hover{ color: var(--brand-gold) !importa
   box-shadow: 0 0 0 .25rem rgba(31,59,120,.25) !important;          /* light blue glow */
   outline: 0 !important;
 }
+
+/* WhatsApp floating button */
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;                 /* WhatsApp green */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 99999;                       /* keep on top */
+  box-shadow: 0 10px 24px rgba(0,0,0,.15);
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+/* Soft white halo behind the green circle */
+.whatsapp-float::after {
+  content: "";
+  position: absolute;
+  inset: -12px;                         /* slightly larger than main circle */
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  z-index: -1;                          /* sits under the green circle */
+}
+
+.whatsapp-float:hover {
+  background: #1EBE57;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(0,0,0,.18);
+}
+
+/* Icon size */
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+  fill: currentColor;
+}
+
+/* Tweak for small screens */
+@media (max-width: 575.98px) {
+  .whatsapp-float { right: 16px; bottom: 16px; width: 56px; height: 56px; }
+  .whatsapp-float svg { width: 26px; height: 26px; }
+}
