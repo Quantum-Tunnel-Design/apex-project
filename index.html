@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta name="description" content="Elevate your online presence with Crafto - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 52+ ready demos.">
     <!-- favicon icon -->
-    <link rel="shortcut icon" href="images/favicon.png">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="images/apexFavicon.ico">
+    <link rel="apple-touch-icon" href="images/apexFavicon.ico">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apexlogo77.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/[Apex] [Logo] Final Logo 1.png">
     <!-- google fonts preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,19 +86,24 @@
   <div class="background-position-center-top h-100 w-100 position-absolute left-0px top-0"
        style="background-image: url('images/vertical-line-bg-small.svg')"></div>
 
-  <!-- particles (kept) -->
-  <div id="particles-style-01" class="h-100 position-absolute left-0px top-0 w-100" data-particle="true" data-particle-options='{
-      "particles":{"number":{"value":6,"density":{"enable":true,"value_area":2000}},
-      "color":{"value":["#d5d52b","#d5d52b","#d5d52b","#d5d52b","#d5d52b"]},
-      "shape":{"type":"circle","stroke":{"width":0,"color":"#000000"}},
-      "opacity":{"value":1,"random":false,"anim":{"enable":false,"speed":1,"sync":false}},
-      "size":{"value":8,"random":true,"anim":{"enable":false,"sync":true}},
-      "line_linked":{"enable":false,"distance":0,"color":"#ffffff","opacity":1,"width":1},
-      "move":{"enable":true,"speed":1,"direction":"right","random":false,"straight":false}},
-      "interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},
-      "onclick":{"enable":false,"mode":"push"},"resize":true}},
-      "retina_detect":false
-  }'></div>
+  <div id="particles-style-01" class="h-100 position-absolute left-0px top-0 w-100"
+     data-particle="true"
+     data-particle-options='{
+       "particles":{
+         "number":{"value":6,"density":{"enable":true,"value_area":2000}},
+         "color":{"value":"#F2A61C"},
+         "shape":{"type":"circle","stroke":{"width":0,"color":"#000000"}},
+         "opacity":{"value":1,"random":false,"anim":{"enable":false,"speed":1,"sync":false}},
+         "size":{"value":8,"random":true,"anim":{"enable":false,"sync":true}},
+         "line_linked":{"enable":false,"distance":0,"color":"#ffffff","opacity":1,"width":1},
+         "move":{"enable":true,"speed":1,"direction":"right","random":false,"straight":false}
+       },
+       "interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},
+       "onclick":{"enable":false,"mode":"push"},"resize":true}},
+       "retina_detect":false
+     }'>
+</div>
+
 
   <!-- decorative green wedge removed on purpose -->
   <!-- <div class="position-absolute left-minus-80px top-25" ...><img src="images/demo-elearning-01.png" alt=""></div> -->
@@ -110,15 +115,17 @@
            data-anime='{ "el": "childs", "opacity": [0, 1], "rotateY": [90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "staggervalue": 200, "duration": 600, "delay": 100, "easing": "easeOutCirc" }'>
         <span class="alt-font fs-75 lh-65 sm-fs-60 fw-500 mb-25px ls-minus-2px">Empowering Minds, Shaping Futures</span>
         <div class="mb-30px w-80 md-w-60 sm-w-100 d-block mx-auto mx-lg-0 overflow-hidden">
-          <span class="fs-18 fw-300 opacity-5 d-inline-block">Apex Campus provides a transformative learning experience for students aged above 18, preparing them for success in a rapidly evolving world.</span>
+          <span class="fs-18 fw-300 opacity-5 d-inline-block">Apex Campus provides a transformative learning experience for students aged 15-22, preparing them for success in a rapidly evolving world.</span>
         </div>
         <div class="overflow-hidden">
-          <a href="#programs" class="btn btn-extra-large btn-base-color btn-rounded btn-switch-text fw-600 d-inline-block me-25px sm-me-10px align-middle left-icon">
-            <span>
-              <span><i class="feather icon-feather-phone"></i></span>
-              <span class="btn-text" data-text="Explore Courses">Contact Us</span>
-            </span>
-          </a>
+          <a href="#contact"
+   class="btn btn-extra-large btn-base-color btn-apex btn-rounded btn-switch-text fw-600 d-inline-block me-25px sm-me-10px align-middle left-icon">
+  <span>
+    <span><i class="feather icon-feather-phone"></i></span>
+    <span class="btn-text" data-text="Explore Courses">Contact Us</span>
+  </span>
+</a>
+
           <a href="https://www.youtube.com/watch?v=cfXHhfNy7tU" class="btn btn-link btn-hover-animation-switch btn-extra-large text-white popup-youtube btn-icon-left">
             <span>
               <span class="btn-text">Explore Courses</span>
@@ -127,7 +134,7 @@
             </span>
           </a>
         </div>
-        <!-- counters (left as in your file) -->
+        <!-- counters (left as in file) -->
       </div>
 
       <!-- right image (home1.jpeg) -->
@@ -322,126 +329,88 @@
 </section>
 
 
+<section class="overflow-hidden big-section bg-gradient-very-light-gray">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-xxl-6 col-lg-7" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+        <div>
+          <h2 class="fw-600 text-dark-gray ls-minus-2px">We are committed to deliver unique digital media solutions.</h2>
+        </div>
+      </div>
+      <div class="col-lg-5 offset-xxl-1" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 300, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+        <div class="sm-mb-30px last-paragraph-no-margin">
+          <span class="d-inline-block fs-15 text-uppercase fw-700 text-black mb-5px">We drive positive change.</span>
+          <p>Create impactful experience story. We are excited for our work and how it positively impacts clients. With over 12 years of experience we have been constantly providing excellent web solutions services.</p>
+        </div>
+      </div>
+    </div>
 
+    <div class="row">
+      <div class="col-12 position-relative">
+        <div class="outside-box-right-25 xs-outside-box-right-0">
 
+          <!-- SLIDER -->
+          <div class="swiper swiper-width-auto magic-cursor drag-cursor"
+               data-slider-options='{
+                 "slidesPerView":"auto",
+                 "spaceBetween":24,
+                 "loop":true,
+                 "autoplay":{"delay":2000,"disableOnInteraction":false},
+                 "pagination":{"el":".swiper-pagination-bullets-02","clickable":true},
+                 "navigation":{"nextEl":".slider-one-slide-next-01","prevEl":".slider-one-slide-prev-01"},
+                 "keyboard":{"enabled":true,"onlyInViewport":true},
+                 "breakpoints":{"1200":{"spaceBetween":36},"992":{"spaceBetween":28}},
+                 "effect":"slide"
+               }'>
+
+            <div class="swiper-wrapper">
+              <!-- small card -->
+              <div class="swiper-slide" style="width:430px;">
+                <img src="images/gallery1.jpg" alt="Gallery 1"
+                     style="display:block;width:100%;height:510px;object-fit:cover;border-radius:12px;">
+              </div>
+
+              <!-- wide card with vertical offset like the template -->
+              <div class="swiper-slide mt-60px sm-mt-0" style="width:635px;">
+                <img src="images/gallery2.jpg" alt="Gallery 2"
+                     style="display:block;width:100%;height:540px;object-fit:cover;border-radius:12px;">
+              </div>
+
+              <div class="swiper-slide" style="width:430px;">
+                <img src="images/gallery3.jpg" alt="Gallery 3"
+                     style="display:block;width:100%;height:510px;object-fit:cover;border-radius:12px;">
+              </div>
+
+              <div class="swiper-slide mt-60px sm-mt-0" style="width:635px;">
+                <img src="images/gallery4.jpg" alt="Gallery 4"
+                     style="display:block;width:100%;height:540px;object-fit:cover;border-radius:12px;">
+              </div>
+
+              <div class="swiper-slide" style="width:430px;">
+                <img src="images/gallery5.jpg" alt="Gallery 5"
+                     style="display:block;width:100%;height:510px;object-fit:cover;border-radius:12px;">
+              </div>
+
+              <div class="swiper-slide mt-60px sm-mt-0" style="width:635px;">
+                <img src="images/gallery6.jpg" alt="Gallery 6"
+                     style="display:block;width:100%;height:540px;object-fit:cover;border-radius:12px;">
+              </div>
+            </div>
+          </div>
+          <!-- /SLIDER -->
+
+        </div>
+
+        <!-- optional pagination (kept hidden in your file)
+        <div class="swiper-pagination swiper-pagination-bullets-02 swiper-pagination-style-2"></div>
+        -->
+      </div>
+    </div>
+  </div>
+</section>
 
         
     <!-- end hero -->
-
-    <section class="ps-2 pe-2">
-            <div class="container-fluid"> 
-                <div class="row">
-                    <div class="col sm-p-0">
-                        <div class="justified-gallery image-gallery-style-06" data-justified-options='{ "rowHeight": 500, "maxRowHeight": false, "captions": false, "margins": 15, "waitThumbnailsLoad": true }' data-anime='{ "el": "childs", "translateY": [0, 0],"opacity": [0,1], "duration": 500, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                            <!-- start gallery item -->
-                            <div class="gallery-box transition-inner-all">
-                                <a href="https://placehold.co/600x800" data-group="lightbox-group-gallery-item-6" title="Lightbox gallery image title">
-                                    <div class="position-relative bg-dark-gray">
-                                        <img src="https://placehold.co/600x800" alt="" />
-                                        <div class="d-flex align-items-center flex-column justify-content-end h-100 w-100 gallery-hover p-45px">
-                                            <i class="icon feather icon-feather-search icon-very-medium text-white absolute-middle-center"></i>
-                                            <span class="gallery-title text-white fs-18">Tailoring</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end gallery item -->
-                            <!-- start gallery item -->
-                            <div class="gallery-box transition-inner-all">
-                                <a href="https://placehold.co/1100x800" data-group="lightbox-group-gallery-item-6" title="Lightbox gallery image title">
-                                    <div class="position-relative bg-dark-gray">
-                                        <img src="https://placehold.co/1100x800" alt="" />
-                                        <div class="d-flex align-items-center flex-column justify-content-end h-100 w-100 gallery-hover p-45px">
-                                            <i class="icon feather icon-feather-search icon-very-medium text-white absolute-middle-center"></i>
-                                            <span class="gallery-title text-white fs-18">Skoda</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end gallery item -->
-                            <!-- start gallery item -->
-                            <div class="gallery-box transition-inner-all">
-                                <a href="https://placehold.co/595x800" data-group="lightbox-group-gallery-item-6" title="Lightbox gallery image title">
-                                    <div class="position-relative bg-dark-gray">
-                                        <img src="https://placehold.co/595x800" alt="" />
-                                        <div class="d-flex align-items-center flex-column justify-content-end h-100 w-100 gallery-hover p-45px">
-                                            <i class="icon feather icon-feather-search icon-very-medium text-white absolute-middle-center"></i>
-                                            <span class="gallery-title text-white fs-18">Johnny</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end gallery item -->
-                            <!-- start gallery item -->
-                            <div class="gallery-box transition-inner-all">
-                                <a href="https://placehold.co/1000x800" data-group="lightbox-group-gallery-item-6" title="Lightbox gallery image title">
-                                    <div class="position-relative bg-dark-gray">
-                                        <img src="https://placehold.co/1000x800" alt="" />
-                                        <div class="d-flex align-items-center flex-column justify-content-end h-100 w-100 gallery-hover p-45px">
-                                            <i class="icon feather icon-feather-search icon-very-medium text-white absolute-middle-center"></i>
-                                            <span class="gallery-title text-white fs-18">Visionen</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end gallery item -->
-                            <!-- start gallery item -->
-                            <div class="gallery-box transition-inner-all">
-                                <a href="https://placehold.co/535x800" data-group="lightbox-group-gallery-item-6" title="Lightbox gallery image title">
-                                    <div class="position-relative bg-dark-gray">
-                                        <img src="https://placehold.co/535x800" alt="" />
-                                        <div class="d-flex align-items-center flex-column justify-content-end h-100 w-100 gallery-hover p-45px">
-                                            <i class="icon feather icon-feather-search icon-very-medium text-white absolute-middle-center"></i>
-                                            <span class="gallery-title text-white fs-18">Cortifiel</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end gallery item -->
-                            <!-- start gallery item -->
-                            <div class="gallery-box transition-inner-all">
-                                <a href="https://placehold.co/1000x800" data-group="lightbox-group-gallery-item-6" title="Lightbox gallery image title">
-                                    <div class="position-relative bg-dark-gray">
-                                        <img src="https://placehold.co/1000x800" alt="" />
-                                        <div class="d-flex align-items-center flex-column justify-content-end h-100 w-100 gallery-hover p-45px">
-                                            <i class="icon feather icon-feather-search icon-very-medium text-white absolute-middle-center"></i>
-                                            <span class="gallery-title text-white fs-18">Pixflow</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- end gallery item --> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    <!-- start programs -->
-    <!-- ===== OUR PROGRAMS ===== -->
-    
-    
-
-    <!-- end programs -->
-
-    <!-- start life (kept existing layout, optional anchor) -->
-
-    <!-- end life -->
-<!--<section class="ipad-top-space-margin bg-dark-gray cover-background page-title-big-typography" style="background-image: url(https://placehold.co/1920x540)">
-            <div class="background-position-center-top h-100 w-100 position-absolute left-0px top-0" style="background-image: url('images/vertical-line-bg-small.svg')"></div>
-            <div id="particles-style-01" class="h-100 position-absolute left-0px top-0 w-100" data-particle="true" data-particle-options='{"particles": {"number": {"value": 8,"density": {"enable": true,"value_area": 2000}},"color": {"value": ["#d5d52b", "#d5d52b", "#d5d52b", "#d5d52b", "#d5d52b"]},"shape": {"type": "circle","stroke":{"width":0,"color":"#000000"}},"opacity": {"value": 1,"random": false,"anim": {"enable": false,"speed": 1,"sync": false}},"size": {"value": 8,"random": true,"anim": {"enable": false,"sync": true}},"line_linked":{"enable":false,"distance":0,"color":"#ffffff","opacity":1,"width":1},"move": {"enable": true,"speed":1,"direction": "right","random": false,"straight": false}},"interactivity": {"detect_on": "canvas","events": {"onhover": {"enable": false,"mode": "repulse"},"onclick": {"enable": false,"mode": "push"},"resize": true}},"retina_detect": false}'></div>
-            <div class="container">
-                <div class="row align-items-center extra-small-screen">
-                    <div class="col-xl-6 col-lg-7 col-md-8 col-sm-9 position-relative page-title-extra-small" data-anime='{ "el": "childs", "translateY": [-15, 0], "perspective": [1200,1200], "scale": [1.1, 1], "rotateX": [50, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <h1 class="mb-20px alt-font text-yellow">Our online courses</h1>
-                        <h2 class="fw-500 m-0 ls-minus-2px text-white alt-font">Best eLearning training classes.</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end page title -->
-        <!-- start section -->
-      
 
         <!-- PROGRAMMES-->
 
@@ -735,7 +704,7 @@
         </p>
       </div>
 
-      <!-- Pie charts (leave as-is so the theme JS draws them) -->
+      <!-- Pie charts (unchanged) -->
       <div class="col-xl-5 col-lg-6 col-md-10 offset-xl-2 position-relative text-center text-lg-start mt-minus-1">
         <div class="row row-cols-1 row-cols-sm-2"
              data-anime='{ "el": "childs", "translateX": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
@@ -764,40 +733,103 @@
       </div>
     </div>
 
-    <!-- Team: simple 3-column grid (no overlay, equal photo sizes) -->
+    <!-- Team grid -->
     <div class="row g-5 align-items-start text-center"
          data-anime='{ "el": "childs", "translateY": [0, 0], "perspective": [800,800], "scale": [1.1, 1], "rotateX": [30, 0], "opacity": [0,1], "duration": 800, "delay": 200, "staggervalue": 300, "easing": "easeOutQuad" }'>
 
-      <!-- Dr. Anika Silva -->
-      <div class="col-12 col-md-4">
-        <img src="images/staff2.png"
-             alt="Dr. Anika Silva – Ph.D. in Business Administration"
-             class="faculty-img img-fluid">
-        <h5 class="mt-3 mb-1 text-dark-gray fw-700">Dr. Anika Silva</h5>
-        <div class="opacity-7">Ph.D. in Business Administration</div>
+      <!-- Suchira Balamage — Business & Accounting -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="faculty-photo-zoom">
+          <img src="images/Suchira Balamage.png"
+               alt="Suchira Balamage — Business &amp; Accounting"
+               class="faculty-img img-fluid">
+        </div>
+        <h5 class="mt-3 mb-1 text-dark-gray fw-700 fs-4">Suchira Balamage</h5>
+        <div class="opacity-7">Business &amp; Accounting</div>
       </div>
 
-      <!-- Prof. Rohan Perera -->
-      <div class="col-12 col-md-4">
-        <img src="images/staff3.png"
-             alt="Prof. Rohan Perera – M.Sc. in Computer Science"
-             class="faculty-img img-fluid">
-        <h5 class="mt-3 mb-1 text-dark-gray fw-700">Prof. Rohan Perera</h5>
-        <div class="opacity-7">M.Sc. in Computer Science</div>
+      <!-- Roshan Jayawardana — Computer Science -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="faculty-photo-zoom">
+          <img src="images/Roshan Jayawardana 2.jpg"
+               alt="Roshan Jayawardana — Computer Science"
+               class="faculty-img img-fluid">
+        </div>
+        <h5 class="mt-3 mb-1 text-dark-gray fw-700 fs-4">Roshan Jayawardana</h5>
+        <div class="opacity-7">Computer Science</div>
       </div>
 
-      <!-- Ms. Kavindi Fernando -->
-      <div class="col-12 col-md-4">
-        <img src="images/staff4.png"
-             alt="Ms. Kavindi Fernando – B.Eng. in Electrical Engineering"
-             class="faculty-img img-fluid">
-        <h5 class="mt-3 mb-1 text-dark-gray fw-700">Ms. Kavindi Fernando</h5>
-        <div class="opacity-7">B.Eng. in Electrical Engineering</div>
+      <!-- Manuja Senarathne — Biology -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="faculty-photo-zoom">
+          <img src="images/Manuja Senarathne.jpg"
+               alt="Manuja Senarathne — Biology"
+               class="faculty-img img-fluid">
+        </div>
+        <h5 class="mt-3 mb-1 text-dark-gray fw-700 fs-4">Manuja Senarathne</h5>
+        <div class="opacity-7">Biology</div>
+      </div>
+
+      <!-- Gajan Sriskandarajah — Physics -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="faculty-photo-zoom">
+          <img src="images/Gajan Sriskandarajah.jpg"
+               alt="Gajan Sriskandarajah — Physics"
+               class="faculty-img img-fluid">
+        </div>
+        <h5 class="mt-3 mb-1 text-dark-gray fw-700 fs-4">Gajan Sriskandarajah</h5>
+        <div class="opacity-7">Physics</div>
+      </div>
+
+      <!-- Arosha Senevirathna — Chemistry -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="faculty-photo-zoom">
+          <img src="images/Arosha Senevirathna.JPG"
+               alt="Arosha Senevirathna — Chemistry"
+               class="faculty-img img-fluid">
+        </div>
+        <h5 class="mt-3 mb-1 text-dark-gray fw-700 fs-4">Arosha Senevirathna</h5>
+        <div class="opacity-7">Chemistry</div>
+      </div>
+
+      <!-- Saman Mahagedara — subject TBD -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="faculty-photo-zoom">
+          <img src="images/Saman Madagedara.jpg"
+               alt="Saman Mahagedara — subject to be confirmed"
+               class="faculty-img img-fluid">
+        </div>
+        <h5 class="mt-3 mb-1 text-dark-gray fw-700 fs-4">Saman Mahagedara</h5>
+        <div class="opacity-7">&nbsp;</div>
+      </div>
+
+      <!-- Avindee Rajapaksha — subject TBD -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="faculty-photo-zoom">
+          <img src="images/avindee rajapaksha.jpg"
+               alt="Avindee Rajapaksha — subject to be confirmed"
+               class="faculty-img img-fluid">
+        </div>
+        <h5 class="mt-3 mb-1 text-dark-gray fw-700 fs-4">Avindee Rajapaksha</h5>
+        <div class="opacity-7">&nbsp;</div>
+      </div>
+
+      <!-- Hasanthi Shiromala — subject TBD -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="faculty-photo-zoom">
+          <img src="images/hasanthi shiromala.jpg"
+               alt="Hasanthi Shiromala — subject to be confirmed"
+               class="faculty-img img-fluid">
+        </div>
+        <h5 class="mt-3 mb-1 text-dark-gray fw-700 fs-4">Hasanthi Shiromala</h5>
+        <div class="opacity-7">&nbsp;</div>
       </div>
 
     </div>
   </div>
 </section>
+
+
 
 
 
@@ -841,126 +873,256 @@
     
     <!-- end blog -->
 
-    <!-- start footer / contact -->
-    <footer id="contact" class="bg-apex-blue position-relative">
-      <div class="position-absolute left-minus-100px top-25px">
-        <img src="images/demo-elearning-bg-05.png" alt="" class="w-80">
-      </div>
-      <div class="background-position-center-top h-100 w-100 position-absolute left-0px top-0" style="background-image: url('images/vertical-line-bg-small.svg')"></div>
-      <div class="container overlap-section">
-        <div class="row g-0 justify-content-center align-items-center text-center bg-base-color border-radius-6px ps-5 pe-5 pt-3 pb-3 mb-8 sm-p-25px background-position-left-bottom background-no-repeat contain-background position-relative" style="background-image: url('images/demo-elearning-bg-06.png')">
-          <div class="col-lg-auto lg-mb-20px">
-            <h6 class="alt-font fw-600 text-dark-gray m-0 ls-minus-1px d-inline-block me-30px lg-me-0">Admission is open for the next year batch</h6>
-          </div>
-          <div class="col-auto">
-            <a href="#contact" class="btn btn-extra-large btn-dark-gray btn-rounded btn-box-shadow btn-switch-text d-inline-block me-20px align-middle xs-m-0">
-              <span>
-                <span class="btn-double-text" data-text="Get started now">Get started now</span>
-                <span><i class="feather icon-feather-thumbs-up"></i></span>
-              </span>
-            </a>
-            <span class="d-block d-sm-inline-block text-dark-gray fs-19 fw-600 left-icon d-inline-block align-middle xs-mt-10px ls-minus-05px"><a href="tel:12345678910"><i class="feather icon-feather-phone-call"></i>+94 11255 5678</a></span>
-          </div>
+    <!-- CONTACT  -->
+
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <div class="card shadow-lg border-0 mx-auto" style="max-width:980px;border-radius:1rem;">
+      <div class="card-body p-4 p-md-5">
+
+        <!-- Title -->
+        <div class="text-center mb-4">
+          <h2 class="fw-bold mb-2">Contact Us</h2>
+          <p class="text-secondary mb-3">Have questions or want to learn more? Reach out to us—we’d love to help.</p>
+          <div class="mx-auto " style="height:6px;width:72px;border-radius:6px; background-color:#1F3B78;"></div>
         </div>
-      </div>
-      <div class="container footer-dark text-center text-sm-start position-relative">
-        <div class="row mb-5 sm-mb-7 xs-mb-30px">
-          <div class="col-lg-3 col-md-4 col-sm-6 d-flex flex-column last-paragraph-no-margin md-mb-40px xs-mb-30px">
-            <a href="#home" class="footer-logo mb-15px d-inline-block">
-              <img src="images/[Apex] [Logo] Final Logo 1.png" data-at2x="images/[Apex] [Logo] Final Logo 1.png" alt="">
-            </a>
-            <p class="lh-28">We are providing high-quality courses for about ten years.</p>
-            <div class="elements-social mt-9 xs-mt-15px">
-  <ul class="small-icon light">
-    <li>
-      <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
-        <i class="feather icon-feather-facebook"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-        <i class="feather icon-feather-instagram"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
-        <i class="feather icon-feather-twitter"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
-        <i class="feather icon-feather-linkedin"></i>
-      </a>
-    </li>
-  </ul>
-</div>
 
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-sm-6 ps-4 last-paragraph-no-margin md-mb-40px xs-mb-30px">
-            <span class="fw-500 fs-18 d-block text-white mb-10px">Popular courses</span>
-            <ul>
-              <li><a href="#programs">Business finance</a></li>
-              <li><a href="#programs">Advanced design</a></li>
-              <li><a href="#programs">Web development</a></li>
-              <li><a href="#programs">Data visualization</a></li>
+        <div class="row g-4 align-items-start">
+          <!-- Left: quick info -->
+          <div class="col-lg-5">
+            <ul class="list-unstyled m-0 fs-6">
+              <li class="d-flex align-items-center mb-3">
+                <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-warning-subtle text-warning me-3" style="width:44px;height:44px;">
+                  <i class="feather icon-feather-phone-call"></i>
+                </span>
+                <span class="text-dark">+94 11 255 5678</span>
+              </li>
+              <li class="d-flex align-items-center mb-3">
+                <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-warning-subtle text-warning me-3" style="width:44px;height:44px;">
+                  <i class="feather icon-feather-mail"></i>
+                </span>
+                <span class="text-dark">info@apexcampus.lk</span>
+              </li>
+              <li class="d-flex align-items-center">
+                <span class="d-inline-flex align-items-center justify-content-center rounded-circle bg-warning-subtle text-warning me-3" style="width:44px;height:44px;">
+                  <i class="feather icon-feather-map-pin"></i>
+                </span>
+                <span class="text-dark">Apex Campus, Colombo</span>
+              </li>
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-4 col-sm-6 last-paragraph-no-margin xs-mb-30px">
-            <span class="fw-500 fs-18 d-block text-white mb-10px">Need help?</span>
-            <span class="lh-26 d-block">Call us directly?</span>
-            <span class="text-white d-block mb-10px"><a href="tel:12345678910">+94 11255 5678 </a><span class="bg-base-color fw-700 text-dark-gray lh-22 text-uppercase border-radius-30px ps-10px pe-10px fs-11 ms-5px d-inline-block align-middle">Free</span></span>
-            <span class="lh-26 d-block">Need support?</span>
-            <a href="mailto:help@domain.com" class="text-white text-decoration-line-bottom">info@apexcampus.lk</a>
-          </div>
+          <!-- Right: form -->
+          <div class="col-lg-7">
+<form id="contactForm" method="POST" novalidate
+      style="background:#ffffff; padding:24px; border-radius:16px; border:1px solid rgba(217,222,232,.6);">
 
-          <div class="col-lg-3 col-md-12 col-sm-6 text-md-center text-lg-start">
-            <span class="fs-18 fw-500 d-block text-white mb-20px">Subscribe our newsletter</span>
-            <div class="d-inline-block w-100 newsletter-style-02 position-relative mb-15px">
-              <form action="email-templates/subscribe-newsletter.php" method="post" class="position-relative w-100">
-                <input class="input-small bg-dark-gray border-color-transparent-white-light w-100 form-control required" type="email" name="email" placeholder="Enter your email...">
-                <input type="hidden" name="redirect" value="">
-                <button type="submit" aria-label="submit" class="btn pe-20px text-white fs-13 fw-500 lg-ps-15px lg-pe-15px submit">Submit <i class="feather icon-feather-arrow-right submit"></i></button>
-                <div class="form-results border-radius-4px pt-5px pb-5px ps-15px pe-15px fs-14 lh-22 mt-10px w-100 text-center position-absolute d-none"></div>
-              </form>
-            </div>
-            <div class="d-flex align-items-center justify-content-center justify-content-md-center justify-content-sm-start justify-content-lg-start fs-14">
-              <div class="d-inline-block"><i class="line-icon-Handshake me-10px align-middle icon-very-medium"></i>Protecting your privacy</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row align-items-center footer-bottom border-top border-color-transparent-white-light pt-30px g-0">
-          <div class="col-xl-7 ps-0 text-center text-xl-start lg-mb-10px">
-            <ul class="footer-navbar fs-16 lh-normal">
-              <li class="nav-item active"><a href="#home" class="nav-link ps-0">Home</a></li>
-              <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-              <li class="nav-item"><a href="#programs" class="nav-link">Courses</a></li>
-              <li class="nav-item"><a href="#faculty" class="nav-link">Faculty</a></li>
-              <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-xl-5 last-paragraph-no-margin text-center text-xl-end">
-            <p class="fs-16">&copy;  <a href="https://www.themezaa.com/" target="_blank" class="text-white text-decoration-line-bottom"></a></p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- end footer / contact -->
-
-    <!-- start scroll progress -->
-    <div class="scroll-progress d-none d-xxl-block">
-      <a href="#" class="scroll-top" aria-label="scroll">
-        <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
-      </a>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <input type="text" name="name" placeholder="Your Name" required
+             class="form-control bg-white border border-1 rounded-3 py-3 text-dark"
+             style="border-color:#e1e6ef!important; color:#2b2f36; background:#fff; box-shadow:none; transition:box-shadow .2s ease, border-color .2s ease;"
+             onfocus="this.style.outline='none'; this.style.borderColor='#3B7DDD'; this.style.boxShadow='0 0 0 .25rem rgba(59,125,221,.25)';"
+             onblur="this.style.borderColor='#e1e6ef'; this.style.boxShadow='none';">
     </div>
-    <!-- end scroll progress -->
 
-    <!-- javascript libraries -->
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/vendors.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-  </body>
-</html>
+    <div class="col-md-6 mb-3">
+      <input type="email" name="email" placeholder="Your Email" required
+             class="form-control bg-white border border-1 rounded-3 py-3 text-dark"
+             style="border-color:#e1e6ef!important; color:#2b2f36; background:#fff; box-shadow:none; transition:box-shadow .2s ease, border-color .2s ease;"
+             onfocus="this.style.outline='none'; this.style.borderColor='#3B7DDD'; this.style.boxShadow='0 0 0 .25rem rgba(59,125,221,.25)';"
+             onblur="this.style.borderColor='#e1e6ef'; this.style.boxShadow='none';">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <textarea name="message" rows="5" placeholder="Your Message" required
+              class="form-control bg-white border border-1 rounded-3 text-dark"
+              style="border-color:#e1e6ef!important; color:#2b2f36; background:#fff; box-shadow:none; transition:box-shadow .2s ease, border-color .2s ease;"
+              onfocus="this.style.outline='none'; this.style.borderColor='#3B7DDD'; this.style.boxShadow='0 0 0 .25rem rgba(59,125,221,.25)';"
+              onblur="this.style.borderColor='#e1e6ef'; this.style.boxShadow='none';"></textarea>
+  </div>
+
+  <button type="submit"
+        class="btn w-100 fw-bold py-3 rounded-3"
+        style="background-color:#1F3B78; border-color:#1F3B78; color:#ffffff;"
+        onmouseover="this.style.backgroundColor='#162c5f'; this.style.borderColor='#162c5f';"
+        onmouseout="this.style.backgroundColor='#1F3B78'; this.style.borderColor='#1F3B78';">
+    Send Message
+  </button>
+
+</form>
+
+
+
+
+
+
+
+
+
+<!-- start footer (kept in Apex blue so it contrasts with the contact section) -->
+<footer id="site-footer" class="bg-apex-blue position-relative">
+  <div class="position-absolute left-minus-100px top-25px">
+    <img src="images/demo-elearning-bg-05.png" alt="" class="w-80">
+  </div>
+  <div class="background-position-center-top h-100 w-100 position-absolute left-0px top-0"
+       style="background-image: url('images/vertical-line-bg-small.svg')"></div>
+
+  <!-- top CTA strip -->
+  <div class="container overlap-section">
+    <div class="row g-0 justify-content-center align-items-center text-center bg-base-color border-radius-6px ps-5 pe-5 pt-3 pb-3 mb-7 sm-p-25px background-position-left-bottom background-no-repeat contain-background position-relative"
+         style="background-image: url('images/demo-elearning-bg-06.png')">
+      <div class="col-lg-auto lg-mb-20px">
+        <h6 class="alt-font fw-600 text-dark-gray m-0 ls-minus-1px d-inline-block me-30px lg-me-0">
+          Admission is open for the next year batch
+        </h6>
+      </div>
+      <div class="col-auto">
+        <a href="#contact" class="btn btn-extra-large btn-dark-gray btn-rounded btn-box-shadow btn-switch-text d-inline-block me-20px align-middle xs-m-0">
+          <span>
+            <span class="btn-double-text" data-text="Get started now">Get started now</span>
+            <span><i class="feather icon-feather-thumbs-up"></i></span>
+          </span>
+        </a>
+        <span class="d-block d-sm-inline-block text-dark-gray fs-19 fw-600 left-icon d-inline-block align-middle xs-mt-10px ls-minus-05px">
+          <a href="tel:+94112555678"><i class="feather icon-feather-phone-call"></i>+94 11255 5678</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer columns -->
+  <div class="container footer-dark text-center text-sm-start position-relative">
+    <div class="row mb-5 sm-mb-7 xs-mb-30px">
+      <!-- Logo + Social -->
+      <div class="col-lg-4 col-md-6 col-sm-12 d-flex flex-column last-paragraph-no-margin md-mb-40px xs-mb-30px">
+        <a href="#home" class="footer-logo mb-15px d-inline-block">
+          <img src="images/reverselogo.png" data-at2x="images/reverselogo.png" alt="">
+        </a>
+        <p class="lh-28">We are providing high-quality courses for about ten years.</p>
+        <div class="elements-social mt-9 xs-mt-15px">
+          <ul class="small-icon light">
+            <li><a href="https://www.facebook.com/"  target="_blank" aria-label="Facebook"><i class="feather icon-feather-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="feather icon-feather-instagram"></i></a></li>
+            <li><a href="https://twitter.com/"       target="_blank" aria-label="Twitter"><i class="feather icon-feather-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/"  target="_blank" aria-label="LinkedIn"><i class="feather icon-feather-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Popular Courses -->
+      <div class="col-lg-4 col-md-6 col-sm-6 ps-4 last-paragraph-no-margin md-mb-40px xs-mb-30px">
+        <span class="fw-500 fs-18 d-block text-white mb-10px">Popular courses</span>
+        <ul>
+          <li><a href="#programs">Business finance</a></li>
+          <li><a href="#programs">Advanced design</a></li>
+          <li><a href="#programs">Web development</a></li>
+          <li><a href="#programs">Data visualization</a></li>
+        </ul>
+      </div>
+
+      <!-- Need Help -->
+      <div class="col-lg-4 col-md-12 col-sm-6 last-paragraph-no-margin xs-mb-30px">
+        <span class="fw-500 fs-18 d-block text-white mb-10px">Need help?</span>
+        <span class="lh-26 d-block">Call us directly?</span>
+        <span class="text-white d-block mb-10px">
+          <a href="tel:+94112555678">+94 11255 5678</a>
+          <span class="bg-base-color fw-700 text-dark-gray lh-22 text-uppercase border-radius-30px ps-10px pe-10px fs-11 ms-5px d-inline-block align-middle">Free</span>
+        </span>
+        <span class="lh-26 d-block">Need support?</span>
+        <a href="mailto:info@apexcampus.lk" class="text-white text-decoration-line-bottom">info@apexcampus.lk</a>
+      </div>
+    </div>
+
+    <div class="row align-items-center footer-bottom border-top border-color-transparent-white-light pt-20px g-0">
+      <div class="col-xl-7 ps-0 text-center text-xl-start lg-mb-10px">
+        <ul class="footer-navbar fs-16 lh-normal">
+          <li class="nav-item active"><a href="#home" class="nav-link ps-0">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#programs" class="nav-link">Courses</a></li>
+          <li class="nav-item"><a href="#faculty" class="nav-link">Faculty</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-xl-5 last-paragraph-no-margin text-center text-xl-end">
+        <p class="fs-16">&copy; <span class="opacity-7">Apex Campus</span></p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->
+
+<!-- start scroll progress -->
+<div class="scroll-progress d-none d-xxl-block">
+  <a href="#" class="scroll-top" aria-label="scroll">
+    <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
+  </a>
+</div>
+<!-- end scroll progress -->
+
+<!-- javascript libraries -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/vendors.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<!-- EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    emailjs.init("v1xWExKhQA35IT7vZ"); // your EmailJS public key
+  })();
+</script>
+
+<script>
+  // Handle form submission (Contact section)
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('#contact form');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const name    = formData.get('name');
+        const email   = formData.get('email');
+        const message = formData.get('message');
+
+        const submitBtn   = form.querySelector('button[type="submit"]');
+        const originalTxt = submitBtn.innerHTML;
+        submitBtn.innerHTML = 'Sending...';
+        submitBtn.disabled  = true;
+
+        emailjs.send('service_dtuwz8d', 'template_zi770w6', {
+          from_name:  name,
+          from_email: email,
+          message:    message
+        })
+        .then(function() {
+          submitBtn.innerHTML = 'Message Sent!';
+          submitBtn.style.backgroundColor = '#28a745';
+          form.reset();
+
+          setTimeout(() => {
+            submitBtn.innerHTML = originalTxt;
+            submitBtn.style.backgroundColor = '';
+            submitBtn.disabled = false;
+          }, 3000);
+        })
+        .catch(function() {
+          submitBtn.innerHTML = 'Error! Try Again';
+          submitBtn.style.backgroundColor = '#dc3545';
+
+          setTimeout(() => {
+            submitBtn.innerHTML = originalTxt;
+            submitBtn.style.backgroundColor = '';
+            submitBtn.disabled = false;
+          }, 3000);
+        });
+      });
+    }
+  });
+</script>
+
+
+   
    <!-- testing -->

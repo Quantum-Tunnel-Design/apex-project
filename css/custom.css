@@ -1,7 +1,13 @@
 /* === Apex brand palette === */
 :root{
-  --brand-navy: #1F3B78;   /* matches logo blue */
-  --brand-gold: #F2A61C;   /* matches logo gold */
+  --brand-navy: #1F3B78;    /*  blue */
+  --brand-gold: #F2A900;    /* Pantone 130 C */
+  --brand-gold-600: #CC8A00;/* darker gold for hover/active */
+
+  /* >>> Focus accent (LIGHT ORANGE) — tweak these two to adjust globally <<< */
+  --focus-orange: #F6BF55;            /* light, softer than logo gold */
+  --focus-orange-rgba: 246, 191, 85;  /* same color in R,G,B for shadows */
+
 }
 
 /* Solid, light navbar that sits above the hero */
@@ -43,13 +49,13 @@ header .navbar.brand-navbar .phone-link:hover{ color: var(--brand-gold) !importa
 .navbar.header-transparent,
 .header-reverse { background: transparent !important; }
 
-/* If you ever switch the navbar to fixed, this keeps hero content from sliding under it
+/* If ever switch the navbar to fixed, this keeps hero content from sliding under it
    (not necessary with sticky, but harmless) */
 @media (max-width: 991.98px){
   #home{ padding-top: 70px; }
 }
 
-/* --- Apex brand blue background (same as hero) --- */
+/* --- Apex brand blue background (same as current hero) --- */
 .bg-apex-blue{
   background-image: linear-gradient(160deg, #0D3C74 0%, #0A2F5A 100%);
   background-color: #0A2F5A; /* fallback */
@@ -58,8 +64,9 @@ header .navbar.brand-navbar .phone-link:hover{ color: var(--brand-gold) !importa
 /* Keep all faculty photos uniform */
 .faculty-img{
   width:100%;
-  aspect-ratio: 4 / 3;   /* consistent frame */
+  aspect-ratio: 4 / 3.5;   /* consistent frame */
   object-fit:cover;      /* fill without distortion */
+  object-position: center 20%;
   border-radius:12px;
   box-shadow:0 10px 24px rgba(0,0,0,.08);
 }
@@ -86,11 +93,399 @@ header .navbar.brand-navbar .phone-link:hover{ color: var(--brand-gold) !importa
   }
 }
 
-/* Hide accidental arrow text left at the very bottom of the page */
+/* =========================================
+   BRAND COLOR OVERRIDES (site-wide)
+   Make the template's "base" & "yellow" = brand gold
+   ========================================= */
+
+/* Utilities */
+.bg-base-color,
+.bg-yellow{ background-color: var(--brand-gold) !important; }
+.text-base-color,
+.text-yellow{ color: var(--brand-gold) !important; }
+
+/* Buttons that depend on base color (e.g., Contact Us) */
+.btn-base-color{
+  background-color: var(--brand-gold) !important;
+  border-color: var(--brand-gold) !important;
+  color: var(--brand-navy) !important; /* readable on gold */
+}
+.btn-base-color:hover,
+.btn-base-color:focus{
+  background-color: var(--brand-gold-600) !important;
+  border-color: var(--brand-gold-600) !important;
+  color: var(--brand-navy) !important;
+}
+
+/* Icons/text inside those buttons */
+.btn-base-color i,
+.btn-base-color .feather{
+  color: var(--brand-navy) !important;
+}
+
+/* Small circular feature icons that used "bg-yellow" in the template */
+.feature-box-icon.bg-yellow{
+  background-color: var(--brand-gold) !important;
+  color: var(--brand-navy) !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+/* =========================================
+   CLEANUPS
+   ========================================= */
+
+/* Hide the vertical "SCROLL" progress widget everywhere */
+.scroll-progress{ display: none !important; }
 
 /* Hide accidental arrow text left at the very bottom of the page */
+.arrow-text { display: none; }
 
-/* Hide accidental arrow text left at the very bottom of the page */
-.arrow-text {
-  display: none;               /* hide the accidental arrow text */
+/* Keep theme's --base-color in sync with brand gold */
+:root{ --base-color: var(--brand-gold); }
+
+/* Force hero CTA to use the logo gold/navy pairing if you keep .btn-apex */
+#home .btn-apex{
+  background-color: var(--brand-gold) !important;
+  border-color: var(--brand-gold) !important;
+  color: var(--brand-navy) !important;
+}
+#home .btn-apex:hover,
+#home .btn-apex:focus{
+  background-color: var(--brand-gold-600) !important;
+  border-color: var(--brand-gold-600) !important;
+  color: var(--brand-navy) !important;
+}
+#home .btn-apex i,
+#home .btn-apex .btn-text{
+  color: var(--brand-navy) !important;
+}
+
+/* =========================================
+   CONTACT FORM STYLING (unchanged blue)
+   ========================================= */
+
+/* Blue button for contact form */
+.bg-primary {
+  background-color: #007bff !important;
+  border-color: #007bff !important;
+}
+.bg-primary:hover,
+.bg-primary:focus {
+  background-color: #0056b3 !important;
+  border-color: #0056b3 !important;
+}
+
+/* -------------------------------------------------
+   REMOVED global white-on-transparent input styling
+   (was causing invisible placeholders on white card)
+   
+   ------------------------------------------------- */
+
+/* Dark variant (optional): only if you add .contact-section--dark on #contact */
+#contact.contact-section--dark form input,
+#contact.contact-section--dark form textarea {
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  background-color: rgba(255,255,255,0.1) !important;
+  color: #fff !important;
+}
+#contact.contact-section--dark form input::placeholder,
+#contact.contact-section--dark form textarea::placeholder {
+  color: rgba(255,255,255,0.7) !important;
+}
+
+/* Contact Us section card styling */
+.contact-section {
+  background: #f8f9fa !important;
+  padding: 60px 0 !important;
+}
+
+.contact-card {
+  background: white !important;
+  border-radius: 15px !important;
+  border: 2px solid #e0e0e0 !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+  padding: 40px 30px !important;
+  margin: 0 auto !important;
+  max-width: 1000px !important;
+}
+
+/* Contact Us title styling */
+.contact-section h2 {
+  color: #333 !important;
+  font-weight: 700 !important;
+  margin-bottom: 10px !important;
+  text-align: center !important;
+  font-size: 28px !important;
+}
+
+/* Contact Us subtitle styling */
+.contact-section p {
+  color: #666 !important;
+  text-align: center !important;
+  margin-bottom: 30px !important;
+  font-size: 16px !important;
+}
+
+/* Contact information styling */
+.contact-section .info-icon {
+  background: #fff3cd !important;
+  color: #856404 !important;
+  border: 1px solid #ffeaa7 !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-right: 15px !important;
+  flex-shrink: 0 !important;
+}
+
+/* =======================
+   CONTACT FORM – LIGHT CARD (FINAL)
+   Strongly scoped to the card so it overrides theme styles
+   ======================= */
+#contact .contact-card .form-control{
+  background:#ffffff !important;
+  color:#333 !important;
+  border:1.5px solid #d9dee8 !important;
+  border-radius:8px !important;
+  padding:12px 15px !important;
+  box-shadow:none !important;
+  font-size:14px !important;
+  transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+
+/* Visible placeholders */
+#contact .contact-card .form-control::placeholder{
+  color:#6c757d !important;
+  opacity:1 !important;
+}
+/* Cross-browser placeholder fallbacks */
+#contact .contact-card .form-control::-webkit-input-placeholder { color:#6c757d !important; opacity:1 !important; }
+#contact .contact-card .form-control::-moz-placeholder          { color:#6c757d !important; opacity:1 !important; }
+#contact .contact-card .form-control:-ms-input-placeholder      { color:#6c757d !important; opacity:1 !important; }
+#contact .contact-card .form-control:-moz-placeholder           { color:#6c757d !important; opacity:1 !important; }
+
+#contact .contact-card .form-control:focus{
+  border-color:#F2A61C !important;
+  box-shadow:0 0 0 0.2rem rgba(242,166,28,0.25) !important;
+  background:#fff !important;
+}
+
+/* (Optional) Per-field accent borders */
+#contact .contact-card .form-control[name="name"]    { border-color:#28a745 !important; }
+#contact .contact-card .form-control[name="email"]   { border-color:#007bff !important; }
+#contact .contact-card .form-control[name="message"] { border-color:#6f42c1 !important; }
+
+/* Contact Us title styling (legacy selectors kept for compatibility) */
+#contact h3 {
+  color: #333 !important;
+  font-weight: 700 !important;
+  margin-bottom: 10px !important;
+  text-align: center !important;
+}
+
+/* Contact Us subtitle styling (legacy) */
+#contact p {
+  color: #666 !important;
+  text-align: center !important;
+  margin-bottom: 30px !important;
+}
+
+/* Contact information panel (legacy) */
+#contact .contact-info {
+  background: #f8f9fa !important;
+  border-radius: 10px !important;
+  padding: 20px !important;
+  border: 1px solid #e9ecef !important;
+}
+
+/* Contact icons styling (legacy) */
+#contact .contact-info i {
+  background: #fff3cd !important;
+  color: #856404 !important;
+  border: 1px solid #ffeaa7 !important;
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-right: 15px !important;
+}
+
+/* =========================================
+   FOOTER SPACING OPTIMIZATION
+   ========================================= */
+
+#contact {
+  padding-top: 40px !important;
+  padding-bottom: 30px !important;
+}
+#contact .container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#contact .row {
+  margin-bottom: 20px !important;
+}
+#contact .footer-logo img {
+  height: 50px !important;
+  max-height: 50px !important;
+}
+#contact form .form-control {
+  padding: 8px 12px !important;
+  font-size: 14px !important;
+}
+#contact .btn-extra-large {
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+}
+#contact .footer-bottom {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+#contact ul li {
+  margin-bottom: 3px !important;
+  line-height: 1.4 !important;
+}
+#contact .elements-social ul li {
+  margin-right: 8px !important;
+}
+#contact form textarea {
+  min-height: 80px !important;
+  resize: vertical;
+}
+
+/* CONTACT – centered card on a light background */
+.contact-section{
+  background:#f8f9fa;           /* light gray background */
+  padding:60px 0;               /* breathing room */
+}
+.contact-card{
+  background:#fff;
+  border-radius:15px;
+  border: 2px solid #e0e0e0;    /* visible gray border */
+  padding:40px 30px;
+  max-width:1000px;             /* keeps it in the middle */
+  margin:0 auto;                /* centers the card */
+  box-shadow:0 4px 20px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+/* Small brand line under the heading */
+.contact-accent{
+  width:80px; height:4px;
+  background:#F2A61C; /* Apex orange */
+  border-radius:2px;
+  margin:14px auto 0;
+}
+
+/* Info icons with yellow highlight */
+.info-icon{
+  width:40px; height:40px; border-radius:50%;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:#fff3cd;     /* light yellow background */
+  color:#856404;          /* dark yellow text */
+  border: 1px solid #ffeaa7; /* yellow border */
+  margin-right:15px;
+  flex:0 0 40px;
+}
+
+/* Reusable Apex orange CTA button (works here and anywhere else) */
+.btn-apex{
+  background-color:#F2A61C !important;
+  border-color:#F2A61C !important;
+  color:white !important;
+  border-radius:8px;
+  font-weight:600;
+  transition: all 0.3s ease !important;
+}
+.btn-apex:hover,
+.btn-apex:focus{
+  background-color:#D48F17 !important;
+  border-color:#D48F17 !important;
+  color:white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(242,166,28,0.3);
+}
+
+/* Tiny spacing helper used above */
+.mb-12px{ margin-bottom:12px; }
+
+/* Make contact form fields clearly visible on the white card (redundant but safe) */
+.contact-card .form-control{
+  background-color:#FFFFFF !important;
+  border:2px solid #dee2e6 !important;
+  color:#333 !important;
+  border-radius:8px;
+  padding:12px 15px;
+  transition: all 0.3s ease !important;
+  font-size: 14px !important;
+}
+.contact-card .form-control::placeholder{
+  color:#6c757d !important;
+  opacity:1 !important;
+}
+.contact-card .form-control:focus{
+  background-color:#FFFFFF !important;
+  border-width: 3px !important;
+  box-shadow:0 0 0 0.2rem rgba(242,166,28,0.25) !important;
+  transform: translateY(-1px);
+}
+
+/* Enhanced focus states for different field types */
+.contact-card .form-control[name="name"]:focus {
+  border-color: #28a745 !important;
+  border-width: 3px !important;
+  box-shadow: 0 0 0 0.2rem rgba(40,167,69,0.25) !important;
+}
+.contact-card .form-control[name="email"]:focus {
+  border-color: #007bff !important;
+  border-width: 3px !important;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25) !important;
+}
+.contact-card .form-control[name="message"]:focus {
+  border-color: #6f42c1 !important;
+  border-width: 3px !important;
+  box-shadow: 0 0 0 0.2rem rgba(111,66,193,0.25) !important;
+}
+
+/* =========================================
+   FORM CONTROLS STYLING (No Labels)
+   ========================================= */
+.contact-form .form-control {
+  border-radius: 8px !important;
+  margin-top: 0 !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Instructor photo: subtle zoom on hover/focus */
+.faculty-photo-zoom{
+  overflow: hidden;          /* clip zoomed image inside rounded frame */
+  border-radius: 12px;       /* match your .faculty-img radius */
+}
+
+.faculty-img{
+  transition: transform .45s ease;   /* smooth zoom */
+  will-change: transform;
+}
+
+.faculty-photo-zoom:hover .faculty-img,
+.faculty-photo-zoom:focus-within .faculty-img{
+  transform: scale(1.08);    /* amount of zoom */
+}
+
+/* Contact form focus ring — light blue */
+#contact input.form-control,
+#contact textarea.form-control{
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+
+#contact input.form-control:focus,
+#contact textarea.form-control:focus{
+  border-color: var(--brand-navy, #1F3B78) !important;              /* logo blue */
+  box-shadow: 0 0 0 .25rem rgba(31,59,120,.25) !important;          /* light blue glow */
+  outline: 0 !important;
 }
