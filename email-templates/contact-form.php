@@ -2,10 +2,16 @@
 if( ! empty( $_POST['email'] ) ) {
 
 	// Enable / Disable SMTP
-	$enable_smtp = 'no'; // yes OR no
+	$enable_smtp = 'yes'; // yes OR no
 
 	// Email Receiver Address
-	$receiver_email = 'info@domain.com';
+	$receiver_email = 'randunivimasha0@gmail.com';
+	
+	// SMTP Configuration
+	$smtp_host = 'smtp.gmail.com';
+	$smtp_port = 587;
+	$smtp_username = 'your-email@gmail.com'; // Replace with your Gmail
+	$smtp_password = 'your-app-password'; // Replace with your Gmail App Password
 
 	// Email Receiver Name for SMTP Email
 	$receiver_name 	= 'Your Name';
@@ -134,12 +140,12 @@ if( ! empty( $_POST['email'] ) ) {
 			$mail = new PHPMailer\PHPMailer\PHPMailer();
 
 			$mail->isSMTP();
-			$mail->Host     = 'YOUR_SMTP_HOST'; // Your SMTP Host
+			$mail->Host     = $smtp_host; // Your SMTP Host
 			$mail->SMTPAuth = true;
-			$mail->Username = 'YOUR_SMTP_USERNAME'; // Your Username
-			$mail->Password = 'YOUR_SMTP_PASSWORD'; // Your Password
-			$mail->SMTPSecure = 'ssl'; // Your Secure Connection
-			$mail->Port     = 465; // Your Port
+			$mail->Username = $smtp_username; // Your Username
+			$mail->Password = $smtp_password; // Your Password
+			$mail->SMTPSecure = 'tls'; // Your Secure Connection
+			$mail->Port     = $smtp_port; // Your Port
 			$mail->setFrom( $fields['Email'], $fields['Name'] );
 			
 			foreach( $toemailaddresses as $toemailaddress ) {
