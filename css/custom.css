@@ -612,3 +612,28 @@ header .navbar.brand-navbar .phone-link:hover{ color: var(--brand-gold) !importa
   #videos .icon-box { width: 60px; height: 60px; }
 }
 
+/* Gallery slider: base fluid images and variable-width cards */
+/* Improve mobile responsiveness for the gallery above Our Programs */
+@media (max-width: 767px) {
+  .swiper .swiper-slide {
+    width: 90vw !important;
+    min-width: 0 !important;
+    margin-top: 0 !important;
+  }
+  .swiper .swiper-slide img {
+    height: 140px !important;
+    border-radius: 8px !important;
+    object-fit: cover !important;
+  }
+}
+@media (max-width: 991px) {
+  .swiper .swiper-slide {
+    width: 95vw !important;
+    min-width: 0 !important;
+  }
+  .swiper .swiper-slide img {
+    height: 180px !important;
+    border-radius: 10px !important;
+    object-fit: cover !important;
+  }
+}
