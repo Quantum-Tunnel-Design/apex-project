@@ -612,3 +612,52 @@ header .navbar.brand-navbar .phone-link:hover{ color: var(--brand-gold) !importa
   #videos .icon-box { width: 60px; height: 60px; }
 }
 
+/*mobile resposnsive*/
+/* === Scroll/unlock fixes — 2025-09-02 === */
+html, body { overflow-y: auto !important; height: auto; }
+
+/* Decorative full-viewport layers shouldn't eat touches/clicks */
+#particles-style-01,
+.background-position-center-top { pointer-events: none; }
+
+/* Disable cursor/drag overlays on touch so they don't block scroll */
+@media (hover: none), (pointer: coarse) {
+  .magic-cursor, .drag-cursor { pointer-events: none !important; }
+}
+
+/* Mobile VH fix so hero doesn't trap viewport */
+.full-screen { min-height: 100svh; height: auto; }
+
+/* Collapsed navbar should be scrollable on small screens */
+@media (max-width: 991.98px) {
+  .navbar-collapse { max-height: 80svh; overflow-y: auto; }
+}
+
+
+/* --- Mobile scroll unlock (final) --- */
+html, body {
+  min-height: 100%;
+  height: auto !important;
+  overflow-y: auto !important;
+  touch-action: pan-y !important;   /* force vertical pan on touch */
+}
+
+/* Disable section traps on small screens */
+@media (max-width: 991.98px) {
+  .full-screen      { min-height: 100svh !important; height: auto !important; }
+  .overlap-height   { height: auto !important; }
+  .overlap-gap-section { margin-top: 0 !important; }
+  .overflow-hidden  { overflow: visible !important; }  /* let content scroll */
+  #videos, #programs, #faculty, #contact { height: auto !important; }
+}
+
+/* Make decorative/full-viewport layers ignore touches */
+#particles-style-01,
+.background-position-center-top { pointer-events: none !important; }
+
+/* Kill cursor/drag overlays on touch devices */
+@media (hover: none), (pointer: coarse) {
+  .magic-cursor, .drag-cursor,
+  .atropos, [data-atropos] { pointer-events: none !important; }
+}
+
