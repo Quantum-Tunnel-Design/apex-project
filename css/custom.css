@@ -661,3 +661,100 @@ html, body {
   .atropos, [data-atropos] { pointer-events: none !important; }
 }
 
+/*mobile responsive of instrcuctor part*/
+
+/* === ABOUT section: mobile layout fixes (cards/circles) === */
+@media (max-width: 576px) {
+  /* add gutters between cards on phones */
+  /* (HTML also needs g-4 g-lg-0 on the row; see note below) */
+  #about .services-box-style-07 .pe-50px,
+  #about .services-box-style-07 .ps-50px { padding-right:24px !important; padding-left:24px !important; }
+
+  /* shrink avatar + halo so they don't overlap bars */
+  #about .services-box-style-07 img.rounded-circle {
+    width:64px !important; height:64px !important; margin-top:16px !important; object-fit:cover;
+  }
+  #about .services-box-style-07 .bg-very-light-gray {
+    width:76px !important; height:76px !important; top:10px !important;
+  }
+
+  /* tighten vertical gaps */
+  #about .services-box-style-07 .mb-25px { margin-bottom:14px !important; }
+  #about .services-box-style-07 .btn-hover { margin-top:8px; }
+
+  /* add space between stacked cards */
+  #about .services-box-style-07 { margin-bottom:18px; }
+}
+
+/* On very narrow phones, hide the halo for safety */
+@media (max-width: 360px) {
+  #about .services-box-style-07 .bg-very-light-gray { display:none !important; }
+}
+
+
+/*circle*/
+/* === CSS-only donuts (override theme canvas) === */
+.pie-chart-style-01.css-donut{
+  /* defaults; you can override per element inline */
+  --ring: #1F3B78;      /* brand navy */
+  --track: #f3f8f8;     /* background ring */
+  --size: 170px;        /* diameter */
+  --thick: 7px;         /* ring thickness */
+  --pct: .99;           /* progress as fraction 0..1 */
+
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+}
+
+/* hide the theme's canvas circle */
+.pie-chart-style-01.css-donut canvas{ display:none !important; }
+
+/* draw the ring */
+.pie-chart-style-01.css-donut::before{
+  content:"";
+  position:absolute; inset:0;
+  border-radius:50%;
+  background: conic-gradient(var(--ring) calc(var(--pct) * 1turn), var(--track) 0);
+  /* cut the middle to make a donut */
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(50% - var(--thick)), #000 calc(50% - var(--thick)));
+          mask: radial-gradient(farthest-side, transparent calc(50% - var(--thick)), #000 calc(50% - var(--thick)));
+}
+
+/* keep the number centered */
+.pie-chart-style-01.css-donut > .percent{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+}
+
+/*gallery*/
+/* ==== Apex Gallery – mobile/tablet responsiveness ==== */
+@media (max-width: 991.98px) {
+  /* remove right offset so slider fits the viewport */
+  #apex-gallery .outside-box-right-25 { margin-right: 0 !important; }
+
+  /* make each slide nearly full width on small screens */
+  #apex-gallery .swiper .swiper-slide {
+    width: 88vw !important;        /* tablet/landscape phones */
+    max-width: 560px;
+    margin-right: 16px;             /* Swiper adds its own gap too */
+  }
+
+  /* normalize image sizing with aspect ratio */
+  #apex-gallery .swiper .swiper-slide img {
+    height: auto !important;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  /* remove staggered vertical offset on mobile */
+  #apex-gallery .mt-60px { margin-top: 0 !important; }
+}
+
+@media (max-width: 575.98px) {
+  /* a touch wider on very small phones */
+  #apex-gallery .swiper .swiper-slide { width: 92vw !important; }
+}
+
