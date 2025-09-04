@@ -1,87 +1,51 @@
 /* === Apex brand palette === */
 :root{
-  --brand-navy: #1F3B78;    /*  blue */
-  --brand-gold: #F2A900;    /* Pantone 130 C */
-  --brand-gold-600: #CC8A00;/* darker gold for hover/active */
+  --brand-navy: #1F3B78;
+  --brand-gold: #F2A900;
+  --brand-gold-600: #CC8A00;
 
-  /* >>> Focus accent (LIGHT ORANGE) — tweak these two to adjust globally <<< */
-  --focus-orange: #F6BF55;            /* light, softer than logo gold */
-  --focus-orange-rgba: 246, 191, 85;  /* same color in R,G,B for shadows */
+  /* Focus accent */
+  --focus-orange: #F6BF55;
+  --focus-orange-rgba: 246,191,85;
 
+  /* Keep theme base color in sync */
+  --base-color: var(--brand-gold);
 }
 
-/* @media (max-width: 767px) {
-  header {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-  }
-  #home {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-  .navbar {
-    margin-bottom: 0 !important;
-  }
-} */
+/* ===== Global safety: allow scrolling; decorative layers ignore input ===== */
+html, body { overflow-y: auto !important; height: auto; }
+#particles-style-01,
+.background-position-center-top,
+.magic-cursor,
+.drag-cursor { pointer-events: none !important; }
 
-/* Solid, light navbar that sits above the hero */
+/* ===== Navbar (solid, sticky) ===== */
 header .navbar.brand-navbar{
-  position: sticky;        /* keeps it at the top while scrolling */
-  top: 0;
-  z-index: 1050;
-  background: #ffffff !important;      /* force white strip */
+  position: sticky; top: 0; z-index: 1050;
+  background: #fff !important;
   border-bottom: 1px solid rgba(0,0,0,.06);
   box-shadow: 0 2px 10px rgba(0,0,0,.03);
-
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-
-
+  margin-bottom: 0 !important; padding-bottom: 0 !important;
 }
-
-#home {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-.navbar {
-  margin-bottom: 0 !important;
-}
-
-/* Logo sizing */
+#home { margin-top: 0 !important; padding-top: 0 !important; }
+.navbar { margin-bottom: 0 !important; }
 header .navbar.brand-navbar .navbar-brand img{ height: 64px; }
-
-/* Toggler bars color (mobile) */
 header .navbar.brand-navbar .navbar-toggler-line{ background: var(--brand-navy); }
-
-/* Link colors */
 header .navbar.brand-navbar .nav-link{
-  color: var(--brand-navy) !important;
-  font-weight: 600;
+  color: var(--brand-navy) !important; font-weight: 600;
 }
 header .navbar.brand-navbar .nav-link:hover,
 header .navbar.brand-navbar .nav-link:focus,
 header .navbar.brand-navbar .nav-link.active{
   color: var(--brand-gold) !important;
 }
-
-/* Phone link color */
-header .navbar.brand-navbar .phone-link{
-  color: var(--brand-navy) !important;
-  transition: color .2s ease;
-}
+header .navbar.brand-navbar .phone-link{ color: var(--brand-navy) !important; transition: color .2s; }
 header .navbar.brand-navbar .phone-link:hover{ color: var(--brand-gold) !important; }
-
-/* Ensure collapsed mobile menu is readable */
 @media (max-width: 991.98px){
   .navbar.brand-navbar .navbar-collapse{
-    background: #ffffff !important;
-    padding: 10px 15px;
-    border-top: 1px solid rgba(0,0,0,.06);
+    background:#fff !important; padding:10px 15px; border-top:1px solid rgba(0,0,0,.06);
   }
-  .navbar.brand-navbar .navbar-nav .nav-link{
-    color: var(--brand-navy) !important;
-  }
+  .navbar.brand-navbar .navbar-nav .nav-link{ color: var(--brand-navy) !important; }
 }
 
 /* Kill any remaining transparent header behavior from the theme */
@@ -89,551 +53,172 @@ header .navbar.brand-navbar .phone-link:hover{ color: var(--brand-gold) !importa
 .navbar.header-transparent,
 .header-reverse { background: transparent !important; }
 
-/* If ever switch the navbar to fixed, this keeps hero content from sliding under it
-   (not necessary with sticky, but harmless) */
-@media (max-width: 991.98px){
-  #home{ padding-top: 70px; }
-}
+/* ===== Brand utilities / buttons ===== */
+.bg-base-color,.bg-yellow{ background-color: var(--brand-gold) !important; }
+.text-base-color,.text-yellow{ color: var(--brand-gold) !important; }
 
-/* --- Apex brand blue background (same as current hero) --- */
-.bg-apex-blue{
-  background-image: linear-gradient(160deg, #0D3C74 0%, #0A2F5A 100%);
-  background-color: #0A2F5A; /* fallback */
-}
-
-/* Keep all faculty photos uniform */
-.faculty-img{
-  width:100%;
-  aspect-ratio: 4 / 3.5;   /* consistent frame */
-  object-fit:cover;      /* fill without distortion */
-  object-position: center 20%;
-  border-radius:12px;
-  box-shadow:0 10px 24px rgba(0,0,0,.08);
-}
-
-/* Centered, wide banner */
-.banner-hero{
-  /* Wider, shallow frame → looks longer */
-  aspect-ratio: 16 / 7;         /* try 16/6 for even longer */
-  border-radius: 12px;
-}
-.banner-hero-img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;            /* fill frame without distortion */
-  display: block;
-}
-
-/* Let the banner grow wider on very large screens */
-@media (min-width: 1400px){
-  .banner-max {
-    max-width: 1400px;          /* adjust if you want even wider */
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* =========================================
-   BRAND COLOR OVERRIDES (site-wide)
-   Make the template's "base" & "yellow" = brand gold
-   ========================================= */
-
-/* Utilities */
-.bg-base-color,
-.bg-yellow{ background-color: var(--brand-gold) !important; }
-.text-base-color,
-.text-yellow{ color: var(--brand-gold) !important; }
-
-/* Buttons that depend on base color (e.g., Contact Us) */
 .btn-base-color{
   background-color: var(--brand-gold) !important;
   border-color: var(--brand-gold) !important;
-  color: var(--brand-navy) !important; /* readable on gold */
+  color: var(--brand-navy) !important;
 }
-.btn-base-color:hover,
-.btn-base-color:focus{
+.btn-base-color:hover,.btn-base-color:focus{
   background-color: var(--brand-gold-600) !important;
   border-color: var(--brand-gold-600) !important;
   color: var(--brand-navy) !important;
 }
 
-/* Icons/text inside those buttons */
-.btn-base-color i,
-.btn-base-color .feather{
-  color: var(--brand-navy) !important;
+/* ===== Hero background helper ===== */
+.bg-apex-blue{
+  background-image: linear-gradient(160deg, #0D3C74 0%, #0A2F5A 100%);
+  background-color: #0A2F5A;
 }
 
-/* Small circular feature icons that used "bg-yellow" in the template */
-.feature-box-icon.bg-yellow{
-  background-color: var(--brand-gold) !important;
-  color: var(--brand-navy) !important;
-  box-shadow: 0 8px 24px rgba(0,0,0,.08);
-}
-
-/* =========================================
-   CLEANUPS
-   ========================================= */
-
-/* Hide the vertical "SCROLL" progress widget everywhere */
-.scroll-progress{ display: none !important; }
-
-/* Hide accidental arrow text left at the very bottom of the page */
-.arrow-text { display: none; }
-
-/* Keep theme's --base-color in sync with brand gold */
-:root{ --base-color: var(--brand-gold); }
-
-/* Force hero CTA to use the logo gold/navy pairing if you keep .btn-apex */
-#home .btn-apex{
-  background-color: var(--brand-gold) !important;
-  border-color: var(--brand-gold) !important;
-  color: var(--brand-navy) !important;
-}
-#home .btn-apex:hover,
-#home .btn-apex:focus{
-  background-color: var(--brand-gold-600) !important;
-  border-color: var(--brand-gold-600) !important;
-  color: var(--brand-navy) !important;
-}
-#home .btn-apex i,
-#home .btn-apex .btn-text{
-  color: var(--brand-navy) !important;
-}
-
-/* =========================================
-   CONTACT FORM STYLING (unchanged blue)
-   ========================================= */
-
-/* Blue button for contact form */
-.bg-primary {
-  background-color: #007bff !important;
-  border-color: #007bff !important;
-}
-.bg-primary:hover,
-.bg-primary:focus {
-  background-color: #0056b3 !important;
-  border-color: #0056b3 !important;
-}
-
-/* -------------------------------------------------
-   REMOVED global white-on-transparent input styling
-   (was causing invisible placeholders on white card)
-   
-   ------------------------------------------------- */
-
-/* Dark variant (optional): only if you add .contact-section--dark on #contact */
-#contact.contact-section--dark form input,
-#contact.contact-section--dark form textarea {
-  border: 1px solid rgba(255,255,255,0.2) !important;
-  background-color: rgba(255,255,255,0.1) !important;
-  color: #fff !important;
-}
-#contact.contact-section--dark form input::placeholder,
-#contact.contact-section--dark form textarea::placeholder {
-  color: rgba(255,255,255,0.7) !important;
-}
-
-/* Contact Us section card styling */
-.contact-section {
-  background: #f8f9fa !important;
-  padding: 60px 0 !important;
-}
-
-.contact-card {
-  background: white !important;
-  border-radius: 15px !important;
-  border: 2px solid #e0e0e0 !important;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
-  padding: 40px 30px !important;
-  margin: 0 auto !important;
-  max-width: 1000px !important;
-}
-
-/* Contact Us title styling */
-.contact-section h2 {
-  color: #333 !important;
-  font-weight: 700 !important;
-  margin-bottom: 10px !important;
-  text-align: center !important;
-  font-size: 28px !important;
-}
-
-/* Contact Us subtitle styling */
-.contact-section p {
-  color: #666 !important;
-  text-align: center !important;
-  margin-bottom: 30px !important;
-  font-size: 16px !important;
-}
-
-/* Contact information styling */
-.contact-section .info-icon {
-  background: #fff3cd !important;
-  color: #856404 !important;
-  border: 1px solid #ffeaa7 !important;
-  border-radius: 50% !important;
-  width: 40px !important;
-  height: 40px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin-right: 15px !important;
-  flex-shrink: 0 !important;
-}
-
-/* =======================
-   CONTACT FORM – LIGHT CARD (FINAL)
-   Strongly scoped to the card so it overrides theme styles
-   ======================= */
-#contact .contact-card .form-control{
-  background:#ffffff !important;
-  color:#333 !important;
-  border:1.5px solid #d9dee8 !important;
-  border-radius:8px !important;
-  padding:12px 15px !important;
-  box-shadow:none !important;
-  font-size:14px !important;
-  transition: border-color .2s ease, box-shadow .2s ease !important;
-}
-
-/* Visible placeholders */
-#contact .contact-card .form-control::placeholder{
-  color:#6c757d !important;
-  opacity:1 !important;
-}
-/* Cross-browser placeholder fallbacks */
-#contact .contact-card .form-control::-webkit-input-placeholder { color:#6c757d !important; opacity:1 !important; }
-#contact .contact-card .form-control::-moz-placeholder          { color:#6c757d !important; opacity:1 !important; }
-#contact .contact-card .form-control:-ms-input-placeholder      { color:#6c757d !important; opacity:1 !important; }
-#contact .contact-card .form-control:-moz-placeholder           { color:#6c757d !important; opacity:1 !important; }
-
-#contact .contact-card .form-control:focus{
-  border-color:#F2A61C !important;
-  box-shadow:0 0 0 0.2rem rgba(242,166,28,0.25) !important;
-  background:#fff !important;
-}
-
-/* (Optional) Per-field accent borders */
-#contact .contact-card .form-control[name="name"]    { border-color:#28a745 !important; }
-#contact .contact-card .form-control[name="email"]   { border-color:#007bff !important; }
-#contact .contact-card .form-control[name="message"] { border-color:#6f42c1 !important; }
-
-/* Contact Us title styling (legacy selectors kept for compatibility) */
-#contact h3 {
-  color: #333 !important;
-  font-weight: 700 !important;
-  margin-bottom: 10px !important;
-  text-align: center !important;
-}
-
-/* Contact Us subtitle styling (legacy) */
-#contact p {
-  color: #666 !important;
-  text-align: center !important;
-  margin-bottom: 30px !important;
-}
-
-/* Contact information panel (legacy) */
-#contact .contact-info {
-  background: #f8f9fa !important;
-  border-radius: 10px !important;
-  padding: 20px !important;
-  border: 1px solid #e9ecef !important;
-}
-
-/* Contact icons styling (legacy) */
-#contact .contact-info i {
-  background: #fff3cd !important;
-  color: #856404 !important;
-  border: 1px solid #ffeaa7 !important;
-  border-radius: 50% !important;
-  width: 40px !important;
-  height: 40px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  margin-right: 15px !important;
-}
-
-/* =========================================
-   FOOTER SPACING OPTIMIZATION
-   ========================================= */
-
-#contact {
-  padding-top: 40px !important;
-  padding-bottom: 30px !important;
-}
-#contact .container {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-#contact .row {
-  margin-bottom: 20px !important;
-}
-#contact .footer-logo img {
-  height: 50px !important;
-  max-height: 50px !important;
-}
-#contact form .form-control {
-  padding: 8px 12px !important;
-  font-size: 14px !important;
-}
-#contact .btn-extra-large {
-  padding: 10px 20px !important;
-  font-size: 14px !important;
-}
-#contact .footer-bottom {
-  padding-top: 15px !important;
-  padding-bottom: 15px !important;
-}
-#contact ul li {
-  margin-bottom: 3px !important;
-  line-height: 1.4 !important;
-}
-#contact .elements-social ul li {
-  margin-right: 8px !important;
-}
-#contact form textarea {
-  min-height: 80px !important;
-  resize: vertical;
-}
-
-/* CONTACT – centered card on a light background */
-.contact-section{
-  background:#f8f9fa;           /* light gray background */
-  padding:60px 0;               /* breathing room */
-}
-.contact-card{
-  background:#fff;
-  border-radius:15px;
-  border: 2px solid #e0e0e0;    /* visible gray border */
-  padding:40px 30px;
-  max-width:1000px;             /* keeps it in the middle */
-  margin:0 auto;                /* centers the card */
-  box-shadow:0 4px 20px rgba(0,0,0,0.1); /* subtle shadow */
-}
-
-/* Small brand line under the heading */
-.contact-accent{
-  width:80px; height:4px;
-  background:#F2A61C; /* Apex orange */
-  border-radius:2px;
-  margin:14px auto 0;
-}
-
-/* Info icons with yellow highlight */
-.info-icon{
-  width:40px; height:40px; border-radius:50%;
-  display:inline-flex; align-items:center; justify-content:center;
-  background:#fff3cd;     /* light yellow background */
-  color:#856404;          /* dark yellow text */
-  border: 1px solid #ffeaa7; /* yellow border */
-  margin-right:15px;
-  flex:0 0 40px;
-}
-
-/* Reusable Apex orange CTA button (works here and anywhere else) */
-.btn-apex{
-  background-color:#F2A61C !important;
-  border-color:#F2A61C !important;
-  color:white !important;
-  border-radius:8px;
-  font-weight:600;
-  transition: all 0.3s ease !important;
-}
-.btn-apex:hover,
-.btn-apex:focus{
-  background-color:#D48F17 !important;
-  border-color:#D48F17 !important;
-  color:white !important;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(242,166,28,0.3);
-}
-
-/* Tiny spacing helper used above */
-.mb-12px{ margin-bottom:12px; }
-
-/* Make contact form fields clearly visible on the white card (redundant but safe) */
-.contact-card .form-control{
-  background-color:#FFFFFF !important;
-  border:2px solid #dee2e6 !important;
-  color:#333 !important;
-  border-radius:8px;
-  padding:12px 15px;
-  transition: all 0.3s ease !important;
-  font-size: 14px !important;
-}
-.contact-card .form-control::placeholder{
-  color:#6c757d !important;
-  opacity:1 !important;
-}
-.contact-card .form-control:focus{
-  background-color:#FFFFFF !important;
-  border-width: 3px !important;
-  box-shadow:0 0 0 0.2rem rgba(242,166,28,0.25) !important;
-  transform: translateY(-1px);
-}
-
-/* Enhanced focus states for different field types */
-.contact-card .form-control[name="name"]:focus {
-  border-color: #28a745 !important;
-  border-width: 3px !important;
-  box-shadow: 0 0 0 0.2rem rgba(40,167,69,0.25) !important;
-}
-.contact-card .form-control[name="email"]:focus {
-  border-color: #007bff !important;
-  border-width: 3px !important;
-  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25) !important;
-}
-.contact-card .form-control[name="message"]:focus {
-  border-color: #6f42c1 !important;
-  border-width: 3px !important;
-  box-shadow: 0 0 0 0.2rem rgba(111,66,193,0.25) !important;
-}
-
-/* =========================================
-   FORM CONTROLS STYLING (No Labels)
-   ========================================= */
-.contact-form .form-control {
-  border-radius: 8px !important;
-  margin-top: 0 !important;
-  position: relative !important;
-  z-index: 1 !important;
-}
-
-/* Instructor photo: subtle zoom on hover/focus */
-.faculty-photo-zoom{
-  overflow: hidden;          /* clip zoomed image inside rounded frame */
-  border-radius: 12px;       /* match your .faculty-img radius */
-}
-
+/* ===== Faculty images + hover zoom ===== */
+.faculty-photo-zoom{ overflow:hidden; border-radius:12px; }
 .faculty-img{
-  transition: transform .45s ease;   /* smooth zoom */
-  will-change: transform;
+  width:100%; aspect-ratio: 4/3.5; object-fit:cover; object-position:center 20%;
+  border-radius:12px; box-shadow:0 10px 24px rgba(0,0,0,.08);
+  transition: transform .45s ease; will-change: transform;
 }
-
 .faculty-photo-zoom:hover .faculty-img,
-.faculty-photo-zoom:focus-within .faculty-img{
-  transform: scale(1.08);    /* amount of zoom */
-}
+.faculty-photo-zoom:focus-within .faculty-img{ transform: scale(1.08); }
 
-/* Contact form focus ring — light blue */
-#contact input.form-control,
-#contact textarea.form-control{
-  transition: box-shadow .2s ease, border-color .2s ease;
+/* ===== Videos slider: uniform 16:9 cards, tight gutters on mobile ===== */
+#videos .box-image { position:relative; overflow:hidden; border-radius:12px; aspect-ratio:16/9; }
+#videos .box-image img{ width:100%; height:100%; object-fit:cover; display:block; }
+@media (max-width: 991.98px){
+  .outside-box-right-15, .outside-box-left-15 { margin: 0 !important; }
 }
-
-#contact input.form-control:focus,
-#contact textarea.form-control:focus{
-  border-color: var(--brand-navy, #1F3B78) !important;              /* logo blue */
-  box-shadow: 0 0 0 .25rem rgba(31,59,120,.25) !important;          /* light blue glow */
-  outline: 0 !important;
-}
-
-/* WhatsApp floating button */
-.whatsapp-float {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #25D366;                 /* WhatsApp green */
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  z-index: 99999;                       /* keep on top */
-  box-shadow: 0 10px 24px rgba(0,0,0,.15);
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
-}
-
-/* Soft white halo behind the green circle */
-.whatsapp-float::after {
-  content: "";
-  position: absolute;
-  inset: -12px;                         /* slightly larger than main circle */
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 10px 26px rgba(0,0,0,.08);
-  z-index: -1;                          /* sits under the green circle */
-}
-
-.whatsapp-float:hover {
-  background: #1EBE57;
-  transform: translateY(-1px);
-  box-shadow: 0 14px 28px rgba(0,0,0,.18);
-}
-
-/* Icon size */
-.whatsapp-float svg {
-  width: 28px;
-  height: 28px;
-  display: block;
-  fill: currentColor;
-}
-/* WhatsApp link */
-/* Tweak for small screens */
-@media (max-width: 575.98px) {
-  .whatsapp-float { right: 16px; bottom: 16px; width: 56px; height: 56px; }
-  .whatsapp-float svg { width: 26px; height: 26px; }
-}
-
-/* --- Videos slider: base fluid images and 16:9 cards --- */
-#videos .box-image {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  aspect-ratio: 16 / 9;          /* keeps thumbnails same height across devices */
-}
-#videos .box-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;              /* crops nicely, no distortion */
-  display: block;
-}
-
-/* Remove outside offsets on small screens so it fits edge-to-edge nicely */
-@media (max-width: 991.98px) {
-  .outside-box-right-15,
-  .outside-box-left-15 { margin: 0 !important; }
-}
-
-/* Tighter text/padding on tablets/phones */
-@media (max-width: 767.98px) {
+@media (max-width: 767.98px){
   #videos .ps-8, #videos .pe-8 { padding-left: 1rem !important; padding-right: 1rem !important; }
   #videos .pt-5 { padding-top: .75rem !important; }
   #videos .fs-19 { font-size: 1rem !important; }
 }
+@media (max-width: 575.98px){ #videos .icon-box { width:60px; height:60px; } }
 
-/* Smaller play icon circle on phones */
-@media (max-width: 575.98px) {
-  #videos .icon-box { width: 60px; height: 60px; }
+/* ===== WhatsApp floating button (single source of truth) ===== */
+.whatsapp-float{
+  position:fixed; right:22px; bottom:22px;
+  width:56px; height:56px; border-radius:50%;
+  background:#25D366; color:#fff; display:inline-flex; align-items:center; justify-content:center;
+  text-decoration:none; box-shadow:0 8px 24px rgba(0,0,0,.18); z-index:99999;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.whatsapp-float:hover{ background:#1EBE57; transform: translateY(-1px); box-shadow:0 14px 28px rgba(0,0,0,.18); }
+.whatsapp-float svg{ width:28px; height:28px; display:block; fill: currentColor; }
+@media (max-width:575.98px){ .whatsapp-float{ right:16px; bottom:16px; width:56px; height:56px; } .whatsapp-float svg{ width:26px; height:26px; } }
+
+/* ===== Gallery (desktop & mobile identical card look) ===== */
+.apex-gallery { background: #f7f8fb; }
+.apex-gallery .section-intro { margin-bottom: 28px; }
+.apex-gallery .swiper { overflow: visible; padding: 6px 4px 36px; }
+.apex-gallery .swiper-wrapper { align-items: stretch; }
+.apex-gallery .swiper-slide { height: auto; }
+
+.apex-gallery-card{
+  border-radius: 16px; overflow: hidden; background: #fff;
+  box-shadow: 0 14px 34px rgba(0,0,0,.10);
+}
+.apex-gallery-img{
+  width:100%; height:100%; aspect-ratio: 4/3; object-fit: cover; display:block;
+}
+.apex-gallery .swiper-pagination-bullets{ bottom:0 !important; }
+.apex-gallery .swiper-pagination-bullet{ opacity:.6; }
+.apex-gallery .swiper-pagination-bullet-active{ opacity:1; }
+
+/* ===== Contact section & card ===== */
+.contact-section{ background:#f8f9fa; padding:60px 0; }
+.contact-card{
+  background:#fff; border-radius:15px; border:2px solid #e0e0e0;
+  padding:40px 30px; max-width:1000px; margin:0 auto; box-shadow:0 4px 20px rgba(0,0,0,.1);
+}
+#contact .contact-card .form-control{
+  background:#fff !important; color:#333 !important;
+  border:1.5px solid #d9dee8 !important; border-radius:8px !important;
+  padding:12px 15px !important; font-size:14px !important; box-shadow:none !important;
+  transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+#contact .contact-card .form-control::placeholder{ color:#6c757d !important; opacity:1 !important; }
+#contact .contact-card .form-control:focus{
+  border-color: var(--brand-gold) !important;
+  box-shadow:0 0 0 0.2rem rgba(var(--focus-orange-rgba),0.25) !important;
+  background:#fff !important;
+}
+#contact input.form-control, #contact textarea.form-control{
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+#contact input.form-control:focus, #contact textarea.form-control:focus{
+  border-color: var(--brand-navy) !important;
+  box-shadow: 0 0 0 .25rem rgba(31,59,120,.25) !important;
+  outline: 0 !important;
 }
 
-/* Gallery slider: base fluid images and variable-width cards */
-/* Improve mobile responsiveness for the gallery above Our Programs */
-@media (max-width: 767px) {
-  .swiper .swiper-slide {
-    width: 90vw !important;
-    min-width: 0 !important;
-    margin-top: 0 !important;
-  }
-  .swiper .swiper-slide img {
-    height: 140px !important;
-    border-radius: 8px !important;
-    object-fit: cover !important;
-  }
+/* Footer micro spacing */
+#contact { padding-top: 40px !important; padding-bottom: 30px !important; }
+#contact .container { padding-top: 20px; padding-bottom: 20px; }
+#contact .row { margin-bottom: 20px !important; }
+#contact .footer-logo img { height: 50px !important; max-height: 50px !important; }
+#contact form .form-control { padding: 8px 12px !important; font-size: 14px !important; }
+#contact .btn-extra-large { padding: 10px 20px !important; font-size: 14px !important; }
+
+/* Hide scroll widget on all screens */
+.scroll-progress{ display:none !important; }
+
+
+
+/* ===== APEX GALLERY (desktop = 3 cards, mobile = same look, swipeable) ===== */
+.apex-gallery { background: #f7f8fb; }
+.apex-gallery .section-intro { margin-bottom: 28px; }
+
+.apex-gallery .swiper { 
+  overflow: visible;               /* show card shadows */
+  padding: 6px 4px 36px;           /* room for bullets */
 }
-@media (max-width: 991px) {
-  .swiper .swiper-slide {
-    width: 95vw !important;
-    min-width: 0 !important;
+
+.apex-gallery .swiper-wrapper { align-items: stretch; }
+.apex-gallery .swiper-slide { height: auto; }    /* slides match card height */
+
+/* Card */
+.apex-gallery-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(0,0,0,.10);
+  background: #fff;
+}
+.apex-gallery-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4/3;               /* keep same shape across devices */
+  object-fit: cover;
+}
+
+/* Optional: consistent gutters on small screens (no negative margins) */
+@media (max-width: 991.98px){
+  .apex-gallery .container { padding-left: 16px; padding-right: 16px; }
+}
+
+/* Bullets & arrows (use Swiper defaults, tiny tweaks) */
+.apex-gallery .swiper-pagination-bullets { bottom: 0 !important; }
+.apex-gallery .swiper-pagination-bullet { opacity:.6; }
+.apex-gallery .swiper-pagination-bullet-active { opacity:1; }
+
+
+/* Scale the existing gallery on small screens without changing its styles */
+@media (max-width: 767.98px) {
+  .apex-gallery-scale {
+    --gallery-scale: 0.52;                /* tweak this number if you want it smaller/bigger */
+    transform: scale(var(--gallery-scale));
+    transform-origin: left top;
+    width: calc(100% / var(--gallery-scale)); /* keeps the scaled width fitting the viewport */
+    margin-bottom: calc((var(--gallery-scale) - 1) * var(--gallery-max-h));
+    padding-bottom: 0%;
   }
-  .swiper .swiper-slide img {
-    height: 180px !important;
-    border-radius: 10px !important;
-    object-fit: cover !important;
+
+  /* Ensure card shadows aren’t clipped when scaled */
+  .apex-gallery-scale,
+  .apex-gallery-scale .swiper {
+    overflow: visible !important;
   }
 }
